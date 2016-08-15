@@ -1,13 +1,17 @@
 def print_rectangle (length, height)
 
-  puts "-" * length
+  top = "-" * length
+
+  body = []
 
   height.times do
-    puts "|" + (" " * (length.to_i - 2)) + "|"
+    body.push("|" + (" " * (length.to_i - 2)) + "|")
   end
 
-  puts "-" * length
+  last = "-" * length
+
+  return top, body, last
 
 end
 
-print_rectangle(20,10)
+puts print_rectangle(20,10)
